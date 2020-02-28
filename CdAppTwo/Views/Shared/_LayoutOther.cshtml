@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS style -->
+    <link rel="stylesheet" href="~/css/main.css">
+    <!-- Slick carousel -->
+    <link rel="stylesheet" type="text/css" href="~/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="~/slick/slick-theme.css" />
+    <!-- Title -->
+    <title>@ViewData["Title"] - CdAppTwo</title>
+</head>
+
+<body>
+    <div class="container other-pages">
+        <h1 class="page-title">@ViewData["Title"]</h1>
+        @RenderBody()
+    </div>
+
+    <!-- Slick + jQuery -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/slick/slick.min.js"></script>
+
+    <!-- Slick-carousel JS -->
+    <script src="js/slick-carousel.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

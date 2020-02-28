@@ -1,0 +1,78 @@
+@model IEnumerable<CdAppTwo.Models.Cd>
+
+@{
+    Layout = "_LayoutStart";
+    ViewData["Title"] = "Index";
+}
+
+<!--<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CdTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CdTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>-->
+
+
+<h1 class="main-header">CD-skivor</h1>
+<div class="cd-content">
+    <div class="cds">
+        @foreach (var cd in Model)
+        {
+            <div>
+                <ul class="top-menu">
+                    <li>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <ul class="sub-menu">
+                            <li><a asp-action="Edit" asp-route-id="@cd.Id">Redigera</a></li>
+                            <li><a asp-action="Delete" asp-route-id="@cd.Id">Radera</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h1 class="cd-artist">@cd.Artist</h1>
+                <h2 class="cd-title">@cd.CdTitle</h2>
+                <span class="cd-year">@cd.Year</span>
+                <a asp-action="Details" asp-route-id="@cd.Id" class="display-songs">Visa mer &#x2192;</a>
+            </div>
+        }
+        </div>
+    <div class="cd-counter"></div>
+</div>
+<a class="button" asp-action="Create">Lägg till skiva <span>+</span></a>

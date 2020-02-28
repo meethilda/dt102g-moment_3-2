@@ -1,0 +1,58 @@
+@model CdAppTwo.Models.Cd
+
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CdTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CdTitle)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Songs)
+        </dt>
+        <dd class="col-sm-10">
+            <ol>
+                @foreach (var song in Model.Songs)
+                {
+                    @if (Model.Songs.Count > 0)
+                    {
+                        <li><strong>@song.SongName</strong> <small>@song.Playtime sekunder</small> | <a asp-controller="Songs" asp-action="Edit" asp-route-id="@song.Id">Redigera</a> <a asp-controller="Songs" asp-action="Delete" asp-route-id="@song.Id">Radera</a></li>
+                    }
+                    else
+                    {
+                        <p>Inga låtar ännu</p>
+                    }
+                }
+            </ol>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Redigera CD</a> |
+    <a asp-controller="Songs" asp-action="Create">Lägg till låt</a> |
+    <a asp-action="Index">Tillbaka</a>
+</div>

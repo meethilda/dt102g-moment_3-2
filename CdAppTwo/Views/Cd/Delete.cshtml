@@ -1,0 +1,39 @@
+@model CdAppTwo.Models.Cd
+
+@{
+    ViewData["Title"] = "Radera CD";
+}
+<h3>Är du säker på att du vill radera denna?</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Artist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Artist)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CdTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CdTitle)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="radera" class="btn btn-danger" />
+        <br />
+        <a asp-action="Index" style="display: block;">Tillbaka</a>
+    </form>
+</div>

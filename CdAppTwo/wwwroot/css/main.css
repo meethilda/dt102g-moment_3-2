@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+}
+
+body {
+    color: #fff;
+    background: #75c9c8;
+}
+
+/* Buttons */
+.button,
+.btn,
+.display-songs {
+    border: none;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    background: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.7em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.button,
+.btn {
+    font-size: 1em;
+}
+
+    .button span {
+        font-size: 1.3em;
+    }
+
+    .button:hover,
+    .btn:hover,
+    .display-songs:hover {
+        background: #fff;
+        color: #75c9c8;
+    }
+
+/* List */
+ol {
+    list-style-position: inside;
+    padding: 10px;
+}
+
+/* Links */
+a {
+    color: #41706f;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #fff;
+    }
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-flow: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-header {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Slider */
+.cd-content {
+    position: relative;
+    margin: 40px;
+}
+
+/* CDs div */
+.cds {
+    max-width: 600px;
+    height: 500px;
+}
+
+/* All slick divs */
+.slick-slide {
+    text-align: right;
+    background: #41706f;
+    display: flex !important;
+    flex-flow: column;
+    padding: 60px;
+    opacity: 0.5;
+    position: relative;
+}
+
+.slick-slide > .cd-year {
+    text-align: left;
+    margin-top: auto;
+}
+
+/* Menu */
+.top-menu {
+    cursor: pointer;
+    position: absolute;
+    text-align: left;
+    list-style: none;
+    border-left: solid 3px #75c9c8;
+}
+/* Dot vision */
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+/* All li elements */
+.top-menu li {
+    padding: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+    .top-menu li a {
+        color: #75c9c8;
+        text-decoration: none;
+    }
+
+        .top-menu li a:hover {
+            color: #fff;
+        }
+
+.sub-menu {
+    display: none;
+    list-style: none;
+    margin-top: 5px;
+}
+
+    .sub-menu li {
+        padding: 5px;
+    }
+
+.top-menu li:hover > .sub-menu {
+    display: block;
+}
+
+/* Slick list, height 100% */
+.slick-track,
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    height: 100%;
+}
+
+/* Current div */
+.slick-current {
+    opacity: 1;
+    height: 100%;
+}
+
+/* Display songs */
+.display-songs {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    margin-top: -10px;
+    color: #fff;
+}
+
+/* Count CDs */
+.cd-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+    letter-spacing: 0.1em;
+    color: #75c9c8;
+}
+
+    .cd-counter span {
+        font-size: 2em;
+        color: #75c9c8;
+    }
+
+
+/* Other pages */
+.other-pages {
+    justify-content: left;
+    align-items: flex-start;
+}
+
+/* Page title */
+.page-title {
+    border-bottom: 1px solid #efefef;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+/* Info div */
+.cd-info {
+    padding: 20px;
+}
+
+/* Form groups */
+.form-group {
+    padding: 5px 0;
+    font-size: 1em;
+}
+
+    .form-group:nth-last-child(-n+2) {
+        padding: 20px 0;
+    }
+/* Input labels */
+.control-label {
+    min-width: 100px;
+    display: inline-block;
+    padding: 5px 0;
+}
+/* Input fields */
+.form-control {
+    border: none;
+    font-size: 0.9em;
+    padding: 5px;
+    color: #3d3d3d;
+}
+
+/* dl */
+.row {
+    padding: 10px 0;
+}
+.row dt {
+    border-bottom: 3px solid #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+.row dd {
+    color: #3d3d3d;
+}
